@@ -1,0 +1,5 @@
+13.06:
+[X] set code syntax
+[ ] basic movement
+[ ] enemy class
+[ ] object pooling

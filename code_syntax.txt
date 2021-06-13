@@ -1,0 +1,18 @@
+using System;
+
+namespace NamespaceName									// Namespace: PasaclCase
+{
+	public class ClassName : MonoBehaviour 				// Class name: PascalCase
+	{
+		[SerializeField] private int valueName;			// Private fields: camelCase
+		[SerializeField] private List<int> listName;
+		
+		public int ValueName => valueName;				// Properties: camelCase
+		
+		public event Action<int> eventName;				// Events: camelCase
+		
+		public void DoTheThing()						// Methods: PascalCase
+		{
+		}
+	}
+}
