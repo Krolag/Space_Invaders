@@ -1,5 +1,11 @@
 13.06:
 [X] set code syntax
-[ ] basic movement
+[X] basic movement
 [ ] enemy class
-[ ] object pooling
+[X] object pooling
+
+14.06:
+[ ] level randomizer
+[ ] enemy randomizer
+[ ] main menu
+[ ] audio
