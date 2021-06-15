@@ -10,9 +10,9 @@ Do wykonania klon Space Invaders.
 
 {X} External input files (statystyki dla przeciwników wczytywane z zewnętrznych plików, opcjonalnie uwzględniające wybrany poziom trudności)
 
-{ } Trzy rodzaje przeciwników różniących się wyglądem i statystykami (częstotliwość strzału, dmg, reload time)
+{I} Trzy rodzaje przeciwników różniących się wyglądem i statystykami (częstotliwość strzału, dmg, reload time)
 
-{ } Poziomy mogą być losowane, wygląd planszy, statku i przeciwników nie ma znaczenia, bez save/load.
+{X} Poziomy mogą być losowane, wygląd planszy, statku i przeciwników nie ma znaczenia, bez save/load.
 
 ## Termin
 16.03
