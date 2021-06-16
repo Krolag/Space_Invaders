@@ -1,11 +1,21 @@
 13.06:
 [X] set code syntax
 [X] basic movement
-[ ] enemy class
+[X] enemy class
 [X] object pooling
 
 14.06:
-[ ] level randomizer
-[ ] enemy randomizer
-[ ] main menu
-[ ] audio
+[X] level randomizer
+[X] enemy randomizer
+
+15.06
+[X] make enemies not shoot at the same time
+[X] damage system based on OnTriggerEnter2D
+[X] obstacles
+[X] main menu
+
+16.06
+[O] FSM - unable to do it properly
+[X] events
+[ ] enemies move
+[O] audio - couldn't find time - was working on project for ZTGK

@@ -10,10 +10,10 @@ public class PlayerInput : MonoBehaviour
 
     [Header("Attack and projectile values")]
     [SerializeField] private KeyCode keyCode;
-    [SerializeField] private float attackDamage;
     [SerializeField] private float projectileSpeed;
-    [SerializeField] private GameObject projectile;
+    [SerializeField] private float reloadTime;
     [SerializeField] private Color color;
+    private float cReloadTime;
 
     void Update()
     {
@@ -24,21 +24,25 @@ public class PlayerInput : MonoBehaviour
         transform.position =  new Vector3(Mathf.Clamp(transform.position.x, maxBoundries.x, maxBoundries.y), transform.position.y, transform.position.z);
         
         /* Check if user clicked attack button */
-        if (Input.GetKeyDown(keyCode))
+        if (Input.GetKeyDown(keyCode) && cReloadTime >= reloadTime)
         {
+            cReloadTime = 0;
+
             /* Instantiate projectile */
             Debug.Log("Pew pew pew");
-            var newProjectile = ObjectPool.Instance.GetPooledObject();
+            var newProjectile = ObjectPool.Instance.GetPooledProjectile();
 
-            /* Check if returned object is not null */
+            /* Check if returned object is not a null */
             if (newProjectile != null)
             {
                 /* Set projectile's speed, attack, color, position and rotation */
-                newProjectile.GetComponent<Projectile>().SetSpeedAndDamage(projectileSpeed, attackDamage, color);
+                newProjectile.GetComponent<Projectile>().SetInitVariables(projectileSpeed, 0, color, true);
                 newProjectile.transform.position = transform.position;
                 newProjectile.transform.rotation = Quaternion.identity;
                 newProjectile.SetActive(true);
             }
         }
+
+        cReloadTime += Time.deltaTime;
     }
 }

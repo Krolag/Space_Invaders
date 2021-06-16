@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<statistics>
+  <enemies>
+    <enemy>
+      <id>0</id>
+      <attackDamage>1</attackDamage>
+      <health>1</health>
+      <number>40</number>
+      <projectileSpeed>3</projectileSpeed>
+      <timeBetweenProjectiles>3</timeBetweenProjectiles>
+    </enemy>
+    <enemy>
+      <id>1</id>
+      <attackDamage>1</attackDamage>
+      <health>1</health>
+      <number>15</number>
+      <projectileSpeed>5</projectileSpeed>
+      <timeBetweenProjectiles>4</timeBetweenProjectiles>
+    </enemy>
+    <enemy>
+      <id>2</id>
+      <attackDamage>1</attackDamage>
+      <health>1</health>
+      <number>5</number>
+      <projectileSpeed>7</projectileSpeed>
+      <timeBetweenProjectiles>5</timeBetweenProjectiles>
+    </enemy>
+  </enemies>
+</statistics>

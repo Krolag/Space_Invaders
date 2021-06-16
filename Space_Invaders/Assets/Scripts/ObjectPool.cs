@@ -6,21 +6,19 @@ public class ObjectPool : MonoBehaviour
 {
     public static ObjectPool Instance;
 
-    [SerializeField] private GameObject pooledObjectsParent;
-    
     [Header("GameObject to pool")]
     [SerializeField] private GameObject projectile;
-    [SerializeField] private int amountToPool;
-    [SerializeField] private List<GameObject> pooledObjects;
+    [SerializeField] private int projectilesToPool;
+    [SerializeField] private List<GameObject> pooledProjectiles;
 
-    public GameObject GetPooledObject()
+    public GameObject GetPooledProjectile()
     {
         /* Iterate through all objects in hierarchy */
-        for (int i = 0; i < amountToPool; i++)
+        for (int i = 0; i < projectilesToPool; i++)
         {
             /* If current object is not active, return it */
-            if (!pooledObjects[i].activeInHierarchy)
-                return pooledObjects[i];
+            if (!pooledProjectiles[i].activeInHierarchy)
+                return pooledProjectiles[i];
         }
 
         /* Return null if objects are currently unavailable */
@@ -38,21 +36,21 @@ public class ObjectPool : MonoBehaviour
             Destroy(this);
         }
 
-        /* Initialize pooledObjects List */
-        pooledObjects = new List<GameObject>();
+        /* Initialize pooledObjects Lists */
+        pooledProjectiles = new List<GameObject>();
     }
 
     private void Start()
     {
-        GameObject tmp;
+        GameObject projectileTMP;
 
-        /* Instantiate new object, deactivate it and add to pooledObjects List */
-        for (int i = 0; i < amountToPool; i++)
+        /* Instantiate new projectiles, deactivate it and add to pooledProjectiles List */
+        for (int i = 0; i < projectilesToPool; i++)
         {
-            tmp = Instantiate(projectile);
-            tmp.transform.parent = pooledObjectsParent.transform;
-            tmp.SetActive(false);
-            pooledObjects.Add(tmp);
+            projectileTMP = Instantiate(projectile);
+            projectileTMP.transform.parent = transform;
+            projectileTMP.SetActive(false);
+            pooledProjectiles.Add(projectileTMP);
         }
     }
 }
