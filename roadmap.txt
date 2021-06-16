@@ -17,5 +17,5 @@
 16.06
 [O] FSM - unable to do it properly
 [X] events
-[ ] enemies move
+[X] enemies move
 [O] audio - couldn't find time - was working on project for ZTGK
